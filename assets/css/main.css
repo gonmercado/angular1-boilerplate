@@ -1,16 +1,66 @@
-main {
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  border-bottom: 1px solid gray;
+  height:100px;
+}
+
+footer {
   position: absolute;
-  display: flex;
+  height:25px;
+  bottom:0;
+  left:0;
+  right: 0;
+  border-top: 1px solid gray;
+}
+
+.body {
+  position: absolute;
   top:100px;
   bottom:25px;
   left:0;
   right:0;
+  display: flex;
+}
+
+.sidebar {
+  width: 150px;
+  padding: 8px;
+}
+
+.sidebar > ul {
+  display: block;
+}
+
+.sidebar > button {
+  display: none;
+}
+
+.sidebar.colapsed {
+  width: 30px;
+}
+
+.sidebar.colapsed > ul {
+  display: none;
+}
+
+.sidebar.colapsed > button {
+  display: inline-block;
+}
+
+main {
+  display: flex;
+  flex-grow:1;
 }
 
 main > div {
   border-left: 1px solid gray;
   padding: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   flex-grow: 1;
 }
 
@@ -45,23 +95,10 @@ main > .expanded {
   background-color: #00bcd4;
 }
 
-header {
-  border-bottom: 1px solid gray;
-  height:100px;
-}
-
-footer {
-  position: absolute;
-  height:25px;
-  bottom:0;
-  left:0;
-  right: 0;
-  border-top: 1px solid gray;
-}
-
 @media (max-width: 700px) {
   main {
     flex-wrap: wrap;
+    overflow-y: auto;
   }
 
   main > div {
