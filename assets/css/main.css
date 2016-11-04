@@ -1,29 +1,26 @@
 body {
+  display: flex;
   margin: 0;
-  box-sizing: border-box;
+  min-height: 100vh;
+  height: 100vh;
+  flex-direction: column;
 }
 
 header {
   border-bottom: 1px solid gray;
   height:100px;
+  flex-shrink: 0;
 }
 
 footer {
-  position: absolute;
-  height:25px;
-  bottom:0;
-  left:0;
-  right: 0;
   border-top: 1px solid gray;
+  height: 30px;
+  flex-shrink: 0;
 }
 
 .body {
-  position: absolute;
-  top:100px;
-  bottom:25px;
-  left:0;
-  right:0;
   display: flex;
+  flex: 1 0 auto;
 }
 
 .sidebar {
