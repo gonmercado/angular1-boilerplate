@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  box-sizing: border-box;
 }
 
 header {
   border-bottom: 1px solid gray;
   height:100px;
+  box-sizing: border-box;
 }
 
 footer {
