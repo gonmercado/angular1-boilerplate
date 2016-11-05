@@ -6,6 +6,7 @@ var ModuleName = 'MyVehicle';
   angular.module(ModuleName, [
     'ngResource',
     'ui.router',
-    'Dashboard'
+    'Dashboard',
+    'Authentication'
   ])
 })()
