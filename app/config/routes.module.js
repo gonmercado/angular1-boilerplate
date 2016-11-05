@@ -6,20 +6,29 @@
         abstract: true,
         views: {
           'header': {
-            templateUrl: '/app/modules/layout/header/header.html'
+            templateUrl: '/app/modules/layout/components/header/header.html'
           },
           'footer': {
-            templateUrl: '/app/modules/layout/footer/footer.html'
+            templateUrl: '/app/modules/layout/components/footer/footer.html'
           },
           'sidebar': {
-            templateUrl: '/app/modules/layout/sidebar/sidebar.html'
+            templateUrl: '/app/modules/layout/components/sidebar/sidebar.html'
           }
         }
       })
-      .state('404', {
+      .state('root.404', {
         url: '/404',
-        templateUrl: '/app/modules/layout/404/404.html'
-      })
+        views: {
+          'header@': {},
+          'footer@': {},
+          'sidebar@': {},
+          'content@': {
+            templateUrl: '/app/modules/layout/components/404/404.html'
+          }
+        }
+      });
+    $urlRouterProvider.when('/', '/dashboard');
+    $urlRouterProvider.otherwise('/404');
   };
 
   angular
