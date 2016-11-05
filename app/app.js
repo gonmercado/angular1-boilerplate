@@ -8,5 +8,5 @@ var ModuleName = 'MyVehicle';
     'ui.router',
     'Dashboard',
     'Authentication'
-  ])
-})()
+  ]);
+})();

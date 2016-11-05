@@ -29,7 +29,7 @@
       });
     $urlRouterProvider.when('/', '/dashboard');
     $urlRouterProvider.otherwise('/404');
-  };
+  }
 
   angular
     .module(ModuleName)
@@ -37,5 +37,5 @@
       '$stateProvider',
       '$urlRouterProvider',
       routeConfig
-    ])
+    ]);
 })();

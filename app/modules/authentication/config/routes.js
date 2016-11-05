@@ -12,6 +12,6 @@
               templateUrl: '/app/modules/authentication/components/login/login.html'
             }
           }
-        })
+        });
     }]);
 })();
