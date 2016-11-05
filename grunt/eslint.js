@@ -10,7 +10,7 @@
       xmlReport: {
         options: {
           format: 'checkstyle',
-          outputFile: 'grunt_reports/eslint/eslint.xml'
+          outputFile: params.common.gruntReportsFolder + '/eslint/eslint.xml'
         },
         files: {
           src: params.eslint.files

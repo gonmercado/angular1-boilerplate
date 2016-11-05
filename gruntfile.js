@@ -5,6 +5,8 @@
     require('load-grunt-config')(grunt, {
       data: {
         common: {
+          gruntReportsFolder: 'grunt_reports',
+          mapExt: '.map',
           frameworkFiles: [
             './bower_components/angular/angular.min.js',
             './bower_components/angular-resource/angular-resource.min.js',
@@ -23,6 +25,7 @@
             './app/modules/**/*.js'
           ],
           appConcatFile: './app/app_concat.js',
+          appMinFile: './app/app.min.js',
           cssFrameworkFiles: [
             './bower_components/normalize-css/normalize.css'
           ],

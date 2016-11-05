@@ -8,6 +8,10 @@
         dest: params.common.frameworkConcatFiles
       },
       app: {
+        options: {
+          separator: ';',
+          sourceMap: true
+        },
         src: params.common.appFiles,
         dest: params.common.appConcatFile
       },
