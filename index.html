@@ -12,8 +12,12 @@
 
   <base href="/">
 
-  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <!--build:css:indexFile ./assets/css/frameworks/frameworks_concat.css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+  <!-- /build -->
+  <!--build:css:indexFile ./assets/css/app_concat.css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+  <!-- /build -->
 
   <!--[if lt IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -21,16 +25,20 @@
 </head>
 
 <body>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="app/modules/layout/layout.js"></script>
-  <script src="app/modules/dashboard/dashboard.js"></script>
-  <script src="app/modules/authentication/authentication.js"></script>
-  <script src="app/app.js"></script>
-  <script src="app/config/routes.module.js"></script>
-  <script src="app/modules/dashboard/config/routes.js"></script>
-  <script src="app/modules/authentication/config/routes.js"></script>
+  <!--build:js:indexFile ./assets/js/frameworks/frameworks_concat.js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!-- /build -->
+  <!--build:js:indexFile ./app/app.min.js -->
+    <script src="app/modules/layout/layout.js"></script>
+    <script src="app/modules/dashboard/dashboard.js"></script>
+    <script src="app/modules/authentication/authentication.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/config/routes.module.js"></script>
+    <script src="app/modules/dashboard/config/routes.js"></script>
+    <script src="app/modules/authentication/config/routes.js"></script>
+  <!-- /build -->
 
   <header ui-view="header"></header>
   <div class="body">
