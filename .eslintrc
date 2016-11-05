@@ -1,0 +1,211 @@
+{
+  env: {
+    browser: true,
+    jasmine: true,
+    jquery: true
+  },
+  globals: {
+    _: false,
+    $: false,
+    module: false,
+    require: false,
+    angular: false,
+    jasmine: false,
+    describe: false,
+    it: false,
+    xdescribe: false,
+    xit: false,
+    fdescribe: false,
+    fit: false,
+    beforeAll: false,
+    afterAll: false,
+    beforeEach: false,
+    afterEach: false,
+    expect: false,
+    inject: false,
+    spyOn: false,
+    conveyFunctions: true,
+    conveyMockData: true,
+    conveyTemplates: true,
+    conveyBenchmark: true,
+    conveyFtHelpers: true,
+    conveyRPCHelpers: true,
+    conveyQueries: true,
+    conveyUtils: true,
+    conveySettings: true,
+    sovosMockFunctions: true,
+    sovosFunctions: true,
+    ModuleName: true,
+    this: true,
+    moment: true,
+    DeepDiff: true
+  },
+  rules: {
+    strict: "off",
+    quotes: [
+      "error",
+      "single"
+    ],
+    no-undef: "error",
+    no-unused-vars: "error",
+    indent: [
+      "error",
+      2,
+      {
+        SwitchCase: 1
+      }
+    ],
+    guard-for-in: "error",
+    block-scoped-var: "error",
+    wrap-iife: [
+      "error",
+      "inside"
+    ],
+    new-cap: "error",
+    no-irregular-whitespace: "error",
+    no-invalid-this: "warn",
+    no-unused-expressions: [
+      "error",
+      {
+        allowTernary: true
+      }
+    ],
+    no-empty: "error",
+    no-implicit-coercion: [
+      "error",
+      {
+        number: true,
+        boolean: true,
+        string: true
+      }
+    ],
+    no-mixed-spaces-and-tabs: "error",
+    no-multi-str: "error",
+    no-multiple-empty-lines: "error",
+    no-multi-spaces: "error",
+    one-var: [
+      "error",
+      {
+        uninitialized: "always",
+        initialized: "never"
+      }
+    ],
+    camelcase: [
+      "error",
+      {
+        properties: "never"
+      }
+    ],
+    comma-style: [
+      "error",
+      "last"
+    ],
+    curly: [
+      "error",
+      "all"
+    ],
+    brace-style: [
+      "error",
+      "stroustrup",
+      {
+        allowSingleLine: true
+      }
+    ],
+    operator-linebreak: [
+      "error",
+      "after"
+    ],
+    padded-blocks: [
+      "error",
+      "never"
+    ],
+    semi: [
+      "error",
+      "always"
+    ],
+    space-infix-ops: "error",
+    keyword-spacing: [
+      "error",
+      {
+        overrides: {
+          if: {
+            after: false
+          },
+          else: {
+            after: false
+          },
+          for: {
+            after: false
+          },
+          while: {
+            after: false
+          },
+          do: {
+            after: false
+          },
+          switch: {
+            after: false
+          },
+          try: {
+            after: false
+          },
+          catch: {
+            after: false
+          }
+        }
+      }
+    ],
+    key-spacing: [
+      "error",
+      {
+        beforeColon: false,
+        afterColon: true
+      }
+    ],
+    space-unary-ops: [
+      "error",
+      {
+        words: false,
+        nonwords: false
+      }
+    ],
+    space-before-function-paren: [
+      "error",
+      "never"
+    ],
+    no-spaced-func: "error",
+    array-bracket-spacing: [
+      "error",
+      "never"
+    ],
+    comma-dangle: [
+      "error",
+      "never"
+    ],
+    space-in-parens: [
+      "error",
+      "never"
+    ],
+    no-trailing-spaces: "error",
+    yoda: [
+      "error",
+      "never"
+    ],
+    max-len: [
+      "error",
+      140,
+      {
+        ignorePattern: "\\s*it"
+      }
+    ],
+    newline-after-var: [
+      "error",
+      "always"
+    ],
+    newline-before-return: "error"
+  },
+  plugins: [
+    "angular",
+    "jasmine"
+  ]
+}
