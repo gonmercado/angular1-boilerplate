@@ -8,7 +8,7 @@ fi
 
 echo $files | xargs ./node_modules/.bin/eslint
 
-rc=?
+rc=$?
 if [[ $rc != 0 ]] ; then
   echo "Eslint Check failed, cannot commit"
   echo "to bypass anyway, use git commit --no-verify, use it at your own risk"

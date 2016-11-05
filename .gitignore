@@ -3,5 +3,6 @@ bower_components
 node_modules
 grunt_reports
 
-app_concat.js
+*_concat.js
+*_concat.css
 app.min.js
