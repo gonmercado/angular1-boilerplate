@@ -16,12 +16,16 @@
           'concat:cssFrameworks',
           'concat:app',
           'concat:css',
-          'uglify:app'
+          'uglify:app',
+          'copy:generateIndexNonMin'
         ]);
 
         grunt.task.run(defaultTasks);
       },
-      resetDev: cleanArray
+      resetDev: cleanArray.concat([
+        'copy:generateIndex',
+        'clean:indexNonMin'
+      ])
     };
   };
 })();

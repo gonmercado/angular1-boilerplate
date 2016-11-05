@@ -42,7 +42,8 @@
           ]
         },
         copy: {
-
+          indexFile: 'index.html',
+          indexNonMinFile: 'indexNonMin.html'
         }
       }
     });

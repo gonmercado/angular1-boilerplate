@@ -16,6 +16,12 @@
       frameworks: [
         params.common.frameworkConcatFiles,
         params.common.cssFrameworkConcatFiles
+      ],
+      indexNonMin: [
+        params.copy.indexNonMinFile
+      ],
+      index: [
+        params.copy.indexFile
       ]
     };
   };
