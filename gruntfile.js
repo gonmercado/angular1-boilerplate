@@ -35,6 +35,12 @@
           ],
           cssConcatFiles: './assets/css/app_concat.css'
         },
+        karma: {
+          utFiles: [
+            './bower_components/angular-mocks/angular-mocks.js',
+            './test/ut/modules/**/*.js'
+          ]
+        },
         eslint: {
           files: [
             './app/**/*.js',

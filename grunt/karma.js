@@ -6,6 +6,7 @@
 
     karmaFiles = karmaFiles.concat(params.common.frameworkFiles);
     karmaFiles = karmaFiles.concat(params.common.appFiles);
+    karmaFiles = karmaFiles.concat(params.karma.utFiles);
 
     // var karmaMinFiles = [];
     //
@@ -28,6 +29,12 @@
       subir: customDirectoryCreator
     };
 
+    // var junitReporter = {
+    //   outputDir: params.common.gruntReportsFolder + '/karma/xml/',
+    //   outputFile: 'karma-ut-results.xml',
+    //   suite: ''
+    // };
+
     return {
       options: {
         basePath: '',
@@ -38,7 +45,7 @@
         logLevel: 'ERROR',
         autoWatch: false,
         singleRun: true,
-        browsers: ['PhantomJS'],
+        browsers: ['Chrome'],
         browserNoActivityTimeout: 15000,
         reportSlowerThan: 0,
         ngHtml2JsPreprocessor: {
@@ -62,11 +69,6 @@
         coverageReporters: {
           reporters: [coberturaReporter, htmlReporter]
         }
-        // junitReporter: {
-        //   outputDir: params.common.gruntReportsFolder + '/karma/xml/',
-        //   outputFile: 'karma-ut-results.xml',
-        //   suite: ''
-        // }
       }
       // min: {
       //
