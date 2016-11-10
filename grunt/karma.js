@@ -45,7 +45,7 @@
         logLevel: 'ERROR',
         autoWatch: false,
         singleRun: true,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         browserNoActivityTimeout: 15000,
         reportSlowerThan: 0,
         ngHtml2JsPreprocessor: {
@@ -96,6 +96,7 @@
         coverageReporters: [
           htmlReporter
         ],
+        browsers: ['Chrome'],
         exclude: params.karma.defaultExcludeArray,
         colors: true,
         autoWatch: true,
