@@ -29,6 +29,10 @@
           'processhtml:indexFile'
         ]);
 
+        if(grunt.option('buildNumber')){
+          defaultTasks.push('replace:app');
+        }
+
         grunt.task.run(defaultTasks);
       },
       resetDev: cleanArray.concat([
