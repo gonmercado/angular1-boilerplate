@@ -27,7 +27,7 @@
     var htmlReporter = {
       type: 'html',
       dir: params.common.gruntReportsFolder + '/coverage-html/',
-      subir: customDirectoryCreator
+      subdir: customDirectoryCreator
     };
 
     var junitReporter = {
@@ -60,11 +60,11 @@
         options: {
           files: karmaFiles
         },
-        reporter: [
+        reporters: [
           'dots',
           'coverage'
         ],
-        coverageReporters: {
+        coverageReporter: {
           reporters: [
             coberturaReporter,
             htmlReporter
@@ -93,9 +93,11 @@
           'dots',
           'coverage'
         ],
-        coverageReporters: [
-          htmlReporter
-        ],
+        coverageReporter: {
+          reporters: [
+            htmlReporter
+          ]
+        },
         browsers: ['Chrome'],
         exclude: params.karma.defaultExcludeArray,
         colors: true,
