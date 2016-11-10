@@ -12,6 +12,8 @@
     return {
       default: function(){
         var defaultTasks = cleanArray.concat([
+          //Running coverage generation
+          'karma:coverage',
           //Running lints
           'eslint:xmlReport',
           //Creating the concat and min version of the files and frameworks
