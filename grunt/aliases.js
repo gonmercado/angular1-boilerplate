@@ -20,6 +20,8 @@
           'concat:app',
           'concat:css',
           'uglify:app',
+          //Running karma on the minimized javascript files
+          'karma:min',
           //Changing index file to use the min and concat version of files
           'copy:generateIndexNonMin',
           'processhtml:indexFile'

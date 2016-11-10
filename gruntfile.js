@@ -39,6 +39,11 @@
           utFiles: [
             './bower_components/angular-mocks/angular-mocks.js',
             './test/ut/modules/**/*.js'
+          ],
+          defaultExcludeArray: [
+            './app/config/routes.modules.js',
+            './app/app_concat.js',
+            './app/app.min.js'
           ]
         },
         eslint: {
