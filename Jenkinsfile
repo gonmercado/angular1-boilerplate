@@ -30,4 +30,16 @@ node (){
     checkout scm
     sh 'git submodule update --init'
   }
+  // ------------------------------------------------------------------------------------
+  // Prepare the environment to have the propper tools and clean folders
+  stage ('Environment Preparation') {
+    //def nodeHome = tool name: 'node-5.10.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+    //env.PATH = "${nodeHome}/bin:${env.PATH}"
+    sh 'npm prune --no-color'
+    sh 'npm install --no-color'
+    sh 'grunt clean:karmaReports'
+    sh 'grunt clean:app'
+    sh 'grunt clean:frameworks'
+    sh 'grunt clean:indexNonMin'
+  }
 }
