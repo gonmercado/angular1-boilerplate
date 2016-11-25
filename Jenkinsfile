@@ -23,7 +23,7 @@ properties([[
   gitLabConnection: 'qnap-gitlab-gonmercado'
 ]])
 
-node ('BUILD2'){
+node (){
   // ------------------------------------------------------------------------------------
   // Update files from Git repository
   stage ('Checkout') {
