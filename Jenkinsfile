@@ -41,4 +41,18 @@ node (){
     sh 'grunt clean:app'
     sh 'grunt clean:frameworks'
   }
+  // ------------------------------------------------------------------------------------
+  // Creates coverage and linting reports
+  stage ('Sanity Reports Generation') {
+    //Running UT to generate coverage report
+    sh 'grunt karma:coverage --force'
+    //Running lints
+    sh 'grunt eslint:xmlReport --force'
+    //step([
+    //  $class: 'hudson.plugins.checkstyle.CheckStylePublisher',
+    //  pattern: 'karma_reports/eslint/eslint.xml',
+    //  unstableTotalAll: '0',
+    // usePreviousBuildAsReference: true
+    //])
+  }
 }
