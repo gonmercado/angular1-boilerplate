@@ -33,7 +33,7 @@ node (){
   // ------------------------------------------------------------------------------------
   // Prepare the environment to have the propper tools and clean folders
   stage ('Environment Preparation') {
-    def nodeHome = tool name: 'node-4.6.2', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+    def nodeHome = tool name: 'NodeJS 4.6.2', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     env.PATH = "${nodeHome}/bin:${env.PATH}"
     sh 'npm prune --no-color'
     sh 'npm install --no-color'
