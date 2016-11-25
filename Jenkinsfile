@@ -69,5 +69,17 @@ node (){
     sh 'grunt processhtml:indexFile'
     //sh 'grunt replace:app'
   }
-  
+  // ------------------------------------------------------------------------------------
+  // Unit tests using karma.
+  stage ('Unit Tests run') {
+    sh 'grunt karma:min --force'
+    //step([
+    //  $class: 'NUnitPublisher',
+    //  testResultsPattern: "karma_reports/xml/**/karma-ut-results.xml",
+    //  debug: false,
+    //  keepJUnitReports: false,
+    //  skipJUnitArchiver:false,
+    //  failIfNoResults: true
+    //])
+  }
 }
