@@ -37,9 +37,8 @@ node (){
     env.PATH = "${nodeHome}/bin:${env.PATH}"
     sh 'npm prune --no-color'
     sh 'npm install --no-color'
-    sh 'grunt clean:karmaReports'
+    sh 'grunt clean:gruntReports'
     sh 'grunt clean:app'
     sh 'grunt clean:frameworks'
-    sh 'grunt clean:indexNonMin'
   }
 }
