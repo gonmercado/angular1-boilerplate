@@ -55,4 +55,19 @@ node (){
     // usePreviousBuildAsReference: true
     //])
   }
+  // ------------------------------------------------------------------------------------
+  // Minimization process, will genereta one app.js (source code), framework.js (third party libs), app.css (application css files.)
+  // and will ofuscate, the js files to reduce size and avoid code stealing.
+  // This will also replace index with the minimized version, and add the no cache functionality.
+  stage ('Minimization process') {
+    sh 'grunt concat:frameworks'
+    sh 'grunt concat:cssFrameworks'
+    sh 'grunt concat:app'
+    sh 'grunt concat:css'
+    sh 'grunt uglify:app'
+    sh 'grunt copy:generateIndexNonMin'
+    sh 'grunt processhtml:indexFile'
+    //sh 'grunt replace:app'
+  }
+  
 }
