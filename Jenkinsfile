@@ -76,7 +76,7 @@ node (){
     sh 'grunt karma:min --force'
     step([
       $class: 'NUnitPublisher',
-      testResultsPattern: "grunt_reports/karma/xml/**/karma-ut-results.xml",
+      testResultsPattern: "grunt_reports/karma/xml/**/*.xml",
       debug: false,
       keepJUnitReports: false,
       skipJUnitArchiver:false,
