@@ -74,13 +74,14 @@ node (){
   // Unit tests using karma.
   stage ('Unit Tests run') {
     sh 'grunt karma:min --force'
-    step([
-      $class: 'NUnitPublisher',
-      testResultsPattern: "grunt_reports/karma/xml/**/*.xml",
-      debug: false,
-      keepJUnitReports: false,
-      skipJUnitArchiver:false,
-      failIfNoResults: true
-    ])
+    junit 'grunt_reports/karma/xml/**/*.xml'
+//    step([
+//      $class: 'NUnitPublisher',
+//      testResultsPattern: "grunt_reports/karma/xml/**/*.xml",
+//      debug: false,
+//      keepJUnitReports: false,
+//      skipJUnitArchiver:false,
+//      failIfNoResults: true
+//    ])
   }
 }
