@@ -49,12 +49,12 @@ node (){
     sh 'grunt karma:coverage --force'
     //Running lints
     sh 'grunt eslint:xmlReport --force'
-    //step([
-    //  $class: 'hudson.plugins.checkstyle.CheckStylePublisher',
-    //  pattern: 'karma_reports/eslint/eslint.xml',
-    //  unstableTotalAll: '0',
-    // usePreviousBuildAsReference: true
-    //])
+    step([
+      $class: 'hudson.plugins.checkstyle.CheckStylePublisher',
+      pattern: 'grunt_reports/eslint/eslint.xml',
+      unstableTotalAll: '0',
+     usePreviousBuildAsReference: true
+    ])
   }
   // ------------------------------------------------------------------------------------
   // Minimization process, will genereta one app.js (source code), framework.js (third party libs), app.css (application css files.)
