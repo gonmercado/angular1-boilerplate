@@ -28,6 +28,6 @@ node (){
   // Update files from Git repository
   stage ('Checkout') {
     checkout scm
-    bat 'git submodule update --init'
+    sh 'git submodule update --init'
   }
 }
