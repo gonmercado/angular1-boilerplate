@@ -47,6 +47,15 @@ node (){
   stage ('Sanity Reports Generation') {
     //Running UT to generate coverage report
     sh 'grunt karma:coverage --force'
+    publishHTML([
+      allowMissing: false, 
+      alwaysLinkToLastBuild: false, 
+      keepAll: false, 
+      reportDir: 'grunt_reports/coverage-html/phantomjs', 
+      reportFiles: 'index.html', 
+      reportName: 'PhantomJS Coverage Report'
+    ])
+
     //Running lints
     sh 'grunt eslint:xmlReport --force'
     step([
@@ -75,13 +84,5 @@ node (){
   stage ('Unit Tests run') {
     sh 'grunt karma:min --force'
     junit 'grunt_reports/karma/xml/**/*.xml'
-//    step([
-//      $class: 'NUnitPublisher',
-//      testResultsPattern: "grunt_reports/karma/xml/**/*.xml",
-//      debug: false,
-//      keepJUnitReports: false,
-//      skipJUnitArchiver:false,
-//      failIfNoResults: true
-//    ])
   }
 }
