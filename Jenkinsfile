@@ -37,7 +37,7 @@ node (){
     env.PATH = "${nodeHome}/bin:${env.PATH}"
     sh 'npm prune --no-color'
     sh 'npm install --no-color'
-    sh 'bower install'
+    sh 'bower install --allow-root'
     sh 'grunt clean:gruntReports'
     sh 'grunt clean:app'
     sh 'grunt clean:frameworks'
