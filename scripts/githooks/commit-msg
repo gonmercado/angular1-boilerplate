@@ -1,0 +1,16 @@
+#!/bin/bash
+
+files=$(git diff --cached --name-only | grep '\.js$')
+
+if [[ $files = "" ]] ; then
+  exit 0
+fi
+
+echo $files | xargs ./node_modules/.bin/eslint
+
+rc=$?
+if [[ $rc != 0 ]] ; then
+  echo "Eslint Check failed, cannot commit"
+  echo "to bypass anyway, use git commit --no-verify, use it at your own risk"
+  exit $rc
+fi
